@@ -4,6 +4,46 @@
   
   <url>
     <loc>https://blog.saiwoniu.com/categories/</loc>
+    <lastmod>2020-02-22T22:07:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/categories/docker/</loc>
+    <lastmod>2020-02-22T22:07:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/tags/docker/</loc>
+    <lastmod>2020-02-22T22:07:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/post/docker%E7%AC%94%E8%AE%B02/</loc>
+    <lastmod>2020-02-22T22:07:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/post/</loc>
+    <lastmod>2020-02-22T22:07:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/tags/</loc>
+    <lastmod>2020-02-22T22:07:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/</loc>
+    <lastmod>2020-02-22T22:07:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/post/docker%E7%AC%94%E8%AE%B01/</loc>
+    <lastmod>2020-02-22T21:49:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/tags/mysql/</loc>
     <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
@@ -13,27 +53,7 @@
   </url>
   
   <url>
-    <loc>https://blog.saiwoniu.com/tags/mysql/</loc>
-    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%807-%E8%A7%A6%E5%8F%91%E5%99%A8/</loc>
-    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.saiwoniu.com/post/</loc>
-    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.saiwoniu.com/tags/</loc>
-    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.saiwoniu.com/</loc>
     <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
@@ -55,6 +75,21 @@
   <url>
     <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%804-%E8%A7%86%E5%9B%BE/</loc>
     <lastmod>2020-02-22T15:47:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/post/%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6%E4%BD%8Dbitbyte%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</loc>
+    <lastmod>2020-02-22T11:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-02-22T11:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-02-22T11:37:00+08:00</lastmod>
   </url>
   
   <url>

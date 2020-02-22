@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MySQL基础（7） | 触发器 | 赛蜗牛的博客</title>
-    <meta property="og:title" content="MySQL基础（7） | 触发器 - 赛蜗牛的博客">
+    <title>docker笔记（1） | 赛蜗牛的博客</title>
+    <meta property="og:title" content="docker笔记（1） - 赛蜗牛的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-02-22T19:04:00&#43;08:00'>
+    <meta property="article:published_time" content='2020-02-22T21:49:00&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-02-22T19:04:00&#43;08:00'>
+    <meta property="article:modified_time" content='2020-02-22T21:49:00&#43;08:00'>
         
     <meta name="Keywords" content="java,C#,Web">
-    <meta name="description" content="MySQL基础（7） | 触发器">
+    <meta name="description" content="docker笔记（1）">
         
     <meta name="author" content="赛蜗牛">
-    <meta property="og:url" content="https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%807-%E8%A7%A6%E5%8F%91%E5%99%A8/">
+    <meta property="og:url" content="https://blog.saiwoniu.com/post/docker%E7%AC%94%E8%AE%B01/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -143,7 +143,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#mysql基础7--触发器">MySQL基础（7） | 触发器</a></li>
+        <li><a href="#docker笔记1">docker笔记（1）</a></li>
       </ul>
     </li>
   </ul>
@@ -179,7 +179,7 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">MySQL基础（7） | 触发器</h1>
+            <h1 class="post-title">docker笔记（1）</h1>
         </header>
         <date class="post-meta meta-date">
             2020年2月22日
@@ -188,7 +188,7 @@
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://blog.saiwoniu.com/categories/mysql'>mysql</a></span>
+            <span class="meta-category"><a href='https://blog.saiwoniu.com/categories/docker'>docker</a></span>
             
         </div>
         
@@ -206,101 +206,80 @@
         </div>
         
         <div class="post-content">
-            <h3 id="mysql基础7--触发器">MySQL基础（7） | 触发器</h3>
+            <h3 id="docker笔记1">docker笔记（1）</h3>
 <hr>
-<h4 id="基本语法">基本语法</h4>
-<ol>
-<li>创建</li>
-</ol>
+<h4 id="1-简介">1. 简介</h4>
+<p><strong>Docker</strong>是一个开源的应用容器引擎；是一个轻量级容器技术；</p>
+<p>Docker支持将软件编译成一个镜像；然后在镜像中各种软件做好配置，将镜像发布出去，其他使用者可以直接使用这个镜像；</p>
+<p>运行中的这个镜像称为容器，容器启动是非常快速的。</p>
+<p><img src="http://image.saiwoniu.com/180303145450.png" alt=""></p>
+<p><strong>核心概念</strong></p>
+<p>docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）；</p>
+<p>docker客户端(Client)：连接docker主机进行操作；</p>
+<p>docker仓库(Registry)：用来保存各种打包好的软件镜像；</p>
+<p>docker镜像(Images)：软件打包好的镜像；放在docker仓库中；</p>
+<p>docker容器(Container)：镜像启动后的实例称为一个容器；容器是独立运行的一个或一组应用</p>
+<p><img src="http://image.saiwoniu.com/180303165113.png" alt=""></p>
+<p><strong>使用Docker的步骤：</strong></p>
+<p>1）、安装Docker</p>
+<p>2）、去Docker仓库找到这个软件对应的镜像；</p>
+<p>3）、使用Docker运行这个镜像，这个镜像就会生成一个Docker容器；</p>
+<p>4）、对容器的启动停止就是对软件的启动停止；</p>
+<hr>
+<h4 id="2-安装docker">2. 安装Docker</h4>
+<p><strong>2.1 安装linux虚拟机</strong></p>
+<p>​	1）VMWare、VirtualBox（安装）；</p>
+<p><img src="http://image.saiwoniu.com/1582379499(1).jpg" alt=""></p>
+<p>​	2）导入虚拟机文件centos7.ova；</p>
+<p>​	3）双击启动linux虚拟机;使用  root/ 123456登陆</p>
+<p>​	4）使用客户端连接linux服务器进行命令操作；</p>
+<p>​	5）设置虚拟机网络；</p>
+<p>​		桥接网络===选好网卡====接入网线；</p>
+<p>​	6）设置好网络以后使用命令重启虚拟机的网络</p>
+<p><strong>2.2 在linux虚拟机上安装docker</strong></p>
+<p>步骤：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#000;font-weight:bold">CREATE</span> <span style="color:#000;font-weight:bold">TRIGGER</span> trigger_name trigger_time trigger_event
- <span style="color:#000;font-weight:bold">ON</span> table_name
- <span style="color:#000;font-weight:bold">FOR</span> <span style="color:#000;font-weight:bold">EACH</span> ROW
- BEGIN
- ...
- END;
-
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1、检查内核版本，必须是3.10及以上
+uname -r
+2、安装docker
+yum install docker
+3、输入y确认安装
+4、启动docker
+<span style="color:#000;font-weight:bold">[</span>root@localhost ~<span style="color:#000;font-weight:bold">]</span><span style="color:#998;font-style:italic"># systemctl start docker</span>
+<span style="color:#000;font-weight:bold">[</span>root@localhost ~<span style="color:#000;font-weight:bold">]</span><span style="color:#998;font-style:italic"># docker -v</span>
+Docker version 1.12.6, build 3e8e77d/1.12.6
+5、开机启动docker
+<span style="color:#000;font-weight:bold">[</span>root@localhost ~<span style="color:#000;font-weight:bold">]</span><span style="color:#998;font-style:italic"># systemctl enable docker</span>
+Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
+6、停止docker
+systemctl stop docker
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>
-<p>将触发器名称放在<code>CREATE TRIGGER</code>语句之后。触发器名称应遵循命名约定<code>[trigger time]_[table name]_[trigger event]</code>，例如before_employees_update。</p>
-</li>
-<li>
-<p>触发激活时间可以在之前或之后。必须指定定义触发器的激活时间。如果要在更改之前处理操作，则使用<code>BEFORE</code>关键字，如果在更改后需要处理操作，则使用<code>AFTER</code>关键字。</p>
-</li>
-<li>
-<p>触发事件可以是<code>INSERT</code>，<code>UPDATE</code>或<code>DELETE</code>。此事件导致触发器被调用。 触发器只能由一个事件调用。要定义由多个事件调用的触发器，必须定义多个触发器，每个事件一个触发器。</p>
-</li>
-<li>
-<p>触发器必须与特定表关联。没有表触发器将不存在，所以必须在<code>ON</code>关键字之后指定表名。</p>
-</li>
-<li>
-<p>将SQL语句放在<code>BEGIN</code>和<code>END</code>块之间。这是定义触发器逻辑的位置。</p>
-</li>
-</ul>
-<p>示例：</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">DELIMITER <span style="color:#a61717;background-color:#e3d2d2">$</span><span style="color:#a61717;background-color:#e3d2d2">$</span>
-<span style="color:#000;font-weight:bold">CREATE</span>
-    <span style="color:#000;font-weight:bold">TRIGGER</span> <span style="color:#000;font-weight:bold">`</span>remaining_BeforeInsert<span style="color:#000;font-weight:bold">`</span> <span style="color:#000;font-weight:bold">BEFORE</span> <span style="color:#000;font-weight:bold">INSERT</span> <span style="color:#000;font-weight:bold">ON</span> <span style="color:#000;font-weight:bold">`</span><span style="color:#000;font-weight:bold">user</span><span style="color:#000;font-weight:bold">`</span>
-    <span style="color:#000;font-weight:bold">FOR</span> <span style="color:#000;font-weight:bold">EACH</span> ROW BEGIN
-    <span style="color:#000;font-weight:bold">IF</span> NEW.remaining <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">100</span> <span style="color:#000;font-weight:bold">THEN</span>  
-        <span style="color:#458;font-weight:bold">SET</span> NEW.remaining <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">100</span>;  
-    END <span style="color:#000;font-weight:bold">IF</span>;  
-    END<span style="color:#a61717;background-color:#e3d2d2">$</span><span style="color:#a61717;background-color:#e3d2d2">$</span>
-DELIMITER ;
-</code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>请注意，</p>
-<p><a href="http://www.yiibai.com/mysql/insert-statement.html">INSERT</a>定义的触发器中，可以仅使用<code>NEW</code>关键字。<strong>不能使用</strong><code>OLD</code>关键字。</p>
-<p><code>DELETE</code>定义的触发器中，没有新行，因此您只能使用<code>OLD</code>关键字。</p>
-<p><a href="http://www.yiibai.com/mysql/update-data.html">UPDATE</a>触发器中，<code>OLD</code>是指更新前的行，而<code>NEW</code>是更新后的行。</p>
-</blockquote>
-<ol start="2">
-<li>查看所有触发器</li>
-</ol>
-<p>看当前数据库中的所有触发器，请使用<code>SHOW TRIGGERS</code>语句，</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#000;font-weight:bold">SHOW</span> TRIGGERS;
-</code></pre></td></tr></table>
-</div>
-</div><p>参考：<a href="https://www.yiibai.com/mysql/create-the-first-trigger-in-mysql.html">https://www.yiibai.com/mysql/create-the-first-trigger-in-mysql.html</a></p>
-
         </div>
 
         
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://blog.saiwoniu.com">赛蜗牛</a></li>
-        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%807-%E8%A7%A6%E5%8F%91%E5%99%A8/">https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%807-%E8%A7%A6%E5%8F%91%E5%99%A8/</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://blog.saiwoniu.com/post/docker%E7%AC%94%E8%AE%B01/">https://blog.saiwoniu.com/post/docker%E7%AC%94%E8%AE%B01/</a></li>
         <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
     </ul>
 </div>
@@ -314,6 +293,8 @@ DELIMITER ;
     <h2>See Also</h2>
     <ul class="listing">
         
+        <li><a href="/post/MySQL%E5%9F%BA%E7%A1%807-%E8%A7%A6%E5%8F%91%E5%99%A8/">MySQL基础（7） | 触发器</a></li>
+        
         <li><a href="/post/MySQL%E5%9F%BA%E7%A1%803-%E5%87%BD%E6%95%B0/">MySQL基础（3） | 函数</a></li>
         
         <li><a href="/post/MySQL%E5%9F%BA%E7%A1%806-check%E7%BA%A6%E6%9D%9F/">MySQL基础（6） | check约束</a></li>
@@ -321,8 +302,6 @@ DELIMITER ;
         <li><a href="/post/MySQL%E5%9F%BA%E7%A1%802-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E8%A1%A8/">MySQL基础（2） | 数据库、数据表</a></li>
         
         <li><a href="/post/MySQL%E5%9F%BA%E7%A1%804-%E8%A7%86%E5%9B%BE/">MySQL基础（4） | 视图</a></li>
-        
-        <li><a href="/post/MySQL%E5%9F%BA%E7%A1%805-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/">MySQL基础（5） | 存储过程</a></li>
         
     </ul>
 </div>
@@ -332,7 +311,7 @@ DELIMITER ;
             
             <ul class="clearfix">
                 
-                <li><a href='https://blog.saiwoniu.com/tags/mysql'>mysql</a></li>
+                <li><a href='https://blog.saiwoniu.com/tags/docker'>docker</a></li>
                 
             </ul>
             

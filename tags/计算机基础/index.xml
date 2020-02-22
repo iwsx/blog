@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机基础 on 赛蜗牛的博客</title>
+    <link>https://blog.saiwoniu.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in 计算机基础 on 赛蜗牛的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 22 Feb 2020 11:37:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.saiwoniu.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>字节、字符、位、bit、byte之间的关系</title>
+      <link>https://blog.saiwoniu.com/post/%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6%E4%BD%8Dbitbyte%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <pubDate>Sat, 22 Feb 2020 11:37:00 +0800</pubDate>
+      
+      <guid>https://blog.saiwoniu.com/post/%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6%E4%BD%8Dbitbyte%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <description>字节、字符、位、bit、byte之间的关系 1. 概要 位（bit）：是计算机 内部数据 储存的最小单位，表示二进制位，11001100是一个八位二进制数。 电脑记忆体中最小的单位，在二进位电脑系统中，每一bit 可以代表0 或 1 的数位讯号。 字节（byte）：是计算机中 数据处理 的基本单位，习惯上用</description>
+    </item>
+    
+  </channel>
+</rss>
