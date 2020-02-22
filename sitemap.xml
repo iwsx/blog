@@ -3,71 +3,81 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://iwsx.github.io/post/</loc>
-    <lastmod>2020-02-19T10:20:08+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/categories/</loc>
+    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/post/secondblog/</loc>
-    <lastmod>2020-02-19T10:20:08+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/categories/mysql/</loc>
+    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/</loc>
-    <lastmod>2020-02-19T10:20:08+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/tags/mysql/</loc>
+    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/post/firstblog/</loc>
-    <lastmod>2020-02-19T09:56:38+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%807-%E8%A7%A6%E5%8F%91%E5%99%A8/</loc>
+    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/categories/</loc>
-    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/post/</loc>
+    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/categories/Golang/</loc>
-    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/tags/</loc>
+    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/tags/golang/</loc>
-    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/</loc>
+    <lastmod>2020-02-22T19:04:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/2019/12/18/golang-gin-query-parameters-array-map.html</loc>
-    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%803-%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2020-02-22T18:56:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/tags/</loc>
-    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%806-check%E7%BA%A6%E6%9D%9F/</loc>
+    <lastmod>2020-02-22T18:26:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/post/2019-12-13-golang-gin-parameters-in-path/</loc>
-    <lastmod>2019-12-13T21:00:00+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%802-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E8%A1%A8/</loc>
+    <lastmod>2020-02-22T16:54:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/post/2019-12-15-golang-gin-query-parameters-source-code-analysis/</loc>
-    <lastmod>2019-12-13T21:00:00+08:00</lastmod>
+    <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%804-%E8%A7%86%E5%9B%BE/</loc>
+    <lastmod>2020-02-22T15:47:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/about/</loc>
-    <lastmod>2015-03-10T00:13:27+00:00</lastmod>
+    <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%805-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2020-02-22T10:54:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/archives/</loc>
+    <loc>https://blog.saiwoniu.com/about/</loc>
+    <lastmod>2020-02-21T23:20:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://iwsx.github.io/search/</loc>
+    <loc>https://blog.saiwoniu.com/post/MySQL%E5%9F%BA%E7%A1%801-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
+    <lastmod>2020-02-21T22:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/archives/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.saiwoniu.com/search/</loc>
   </url>
   
 </urlset>

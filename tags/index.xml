@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 赛蜗牛的博客</title>
-    <link>https://iwsx.github.io/tags/</link>
+    <link>https://blog.saiwoniu.com/tags/</link>
     <description>Recent content in Tags on 赛蜗牛的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Dec 2019 21:55:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 19:04:00 +0800</lastBuildDate>
     
-	<atom:link href="https://iwsx.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.saiwoniu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>golang</title>
-      <link>https://iwsx.github.io/tags/golang/</link>
-      <pubDate>Wed, 18 Dec 2019 21:55:00 +0800</pubDate>
+      <title>mysql</title>
+      <link>https://blog.saiwoniu.com/tags/mysql/</link>
+      <pubDate>Sat, 22 Feb 2020 19:04:00 +0800</pubDate>
       
-      <guid>https://iwsx.github.io/tags/golang/</guid>
+      <guid>https://blog.saiwoniu.com/tags/mysql/</guid>
       <description></description>
     </item>
     
